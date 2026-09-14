@@ -1,5 +1,5 @@
-const CACHE = "dr-kell-v1";
-const FILES = ["./", "./caloria.html", "./manifest.webmanifest"];
+const CACHE = "dr-kell-v2";
+const FILES = ["./", "./caloria.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(FILES)));
