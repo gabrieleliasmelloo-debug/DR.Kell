@@ -1,4 +1,4 @@
-const CACHE = "dr-kell-v4";
+const CACHE = "dr-kell-v5";
 const FILES = ["./", "./caloria.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (event) => {
