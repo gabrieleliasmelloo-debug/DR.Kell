@@ -1,0 +1,10 @@
+{
+  "name": "Dr. Kell",
+  "short_name": "Dr. Kell",
+  "description": "Seu diário pessoal de alimentação, água e exercícios.",
+  "start_url": "./caloria.html",
+  "display": "standalone",
+  "background_color": "#0c1512",
+  "theme_color": "#0c1512",
+  "lang": "pt-BR"
+}
