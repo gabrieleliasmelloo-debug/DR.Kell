@@ -12,6 +12,7 @@
 .octo{position:relative}
 .octo .mascot-main{position:relative;display:grid;place-items:center;width:1em;height:1em;font-size:31px;line-height:1;letter-spacing:0;isolation:isolate}
 .side .octo .mascot-main{font-size:60px}
+.mascot-glyph{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;font-weight:normal}
 .mascot-main::before,.mascot-main::after{position:absolute;z-index:4;content:"";pointer-events:none;box-sizing:border-box}
 .v-blue{filter:hue-rotate(145deg) saturate(1.35)}
 .v-pink{filter:hue-rotate(305deg) saturate(1.25)}
@@ -58,6 +59,8 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid 
 </style>
 <script>
 // Keep the existing diary and its storage key when upgrading.
+mascot=function(v){const valid=["classic","cool","hat","royal","blue","pink","party","space"];return '<span class="mascot-main v-'+(valid.includes(v)?v:"classic")+'"><span class="mascot-glyph">🐙</span></span>'};
+$("brandAvatar").innerHTML=mascot(S.profile.avatar);$("profileAvatar").innerHTML=mascot(S.profile.avatar);
 function localDay(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")}
 function feedback(message){let e=$("appFeedback");if(!e){e=document.createElement("div");e.id="appFeedback";e.setAttribute("role","status");document.body.append(e)}e.textContent=message;e.hidden=false;clearTimeout(feedback.timer);feedback.timer=setTimeout(()=>e.hidden=true,3200)}
 const progressHeader=document.querySelector("#progress .head");
